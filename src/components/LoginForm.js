@@ -6,7 +6,6 @@ import {Row, Col, Form, Button} from 'react-bootstrap';
 // --------------------------  styles ---------------------------------------------
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
-import styles from "../styles/loginForm.css";
 
 // --------------------------  components -----------------------------------------
 
@@ -27,12 +26,27 @@ export default class LoginForm extends Component {
 
   render() {
     return (
-      <Form className={styles.loginForm}>
+      <Form className='loginForm'>
           <style type="text/css">
             {`
             #formBasicEmail, #formBasicPassword {
               border: solid 1px black;
               border-radius: 0px;
+            }
+            .togglePW {
+              margin-top: -23px;
+              margin-bottom: 7px;
+            }
+            .btn-primary, .btn-primary:active, .btn-primary:hover {
+              background-color: #006760;
+              border: solid #006760;
+            }
+            .customTextColor {
+              color: #006760;
+            }
+            .customizedLink, .customizedLink:hover, .customizedLink:active, .customizedLink:visited {
+              color: #006760;
+              text-decoration: underline;
             }
             `}
           </style>
@@ -43,34 +57,20 @@ export default class LoginForm extends Component {
 
         <Form.Group controlId="formBasicPassword" >
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" type={this.state.isPasswordVisible ? "text" : "password"}/>
-            <style type="text/css">
-              {`
-              .togglePW{
-                color: #006760;
-                margin-top: -23px;
-                margin-bottom: 7px;
-              }
-              `}
-            </style>
-            <div className={`${styles.togglePassword} text-right mr-2 togglePW`} onClick={() => this.togglePassword()}>
-              {this.state.isPasswordVisible ? 
-                <FontAwesomeIcon icon={faEyeSlash} /> : 
-                <FontAwesomeIcon icon={faEye} />}
-              {this.state.isPasswordVisible ? ' Hide' : ' Show'}
-            </div>
-          <Form.Text className="text-muted text-right">
-            Forgot password?
+          <Form.Control 
+          type={this.state.isPasswordVisible ? "text" : "password"}
+          style={{cursor: 'pointer'}}
+          />
+          <div className='text-right mr-2 togglePW customTextColor' onClick={() => this.togglePassword()}>
+            {this.state.isPasswordVisible ? 
+              <FontAwesomeIcon icon={faEyeSlash} /> : 
+              <FontAwesomeIcon icon={faEye} />}
+            {this.state.isPasswordVisible ? ' Hide' : ' Show'}
+          </div>
+          <Form.Text className="mr-1 text-right">
+            <a className='customizedLink' href="">Forgot password?</a>
           </Form.Text>
         </Form.Group>
-          <style type="text/css">
-            {`
-            .btn-primary, .btn-primary:hover{
-              background-color: #006760;
-              border: solid #006760;
-            }
-            `}
-          </style>
         <Button variant="primary" type="submit" className="w-100">
           LOGIN >
         </Button>
