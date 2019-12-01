@@ -5,3 +5,7 @@
 .button {
   background-color: #006760;
 }
+
+.togglePassword {
+   cursor: pointer;
+}

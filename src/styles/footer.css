@@ -1,2 +1,8 @@
 .footer {
+  bottom: 0px;
+}
+
+img {
+  max-width: 75px;
+  max-height: auto;
 }

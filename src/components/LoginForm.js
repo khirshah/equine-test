@@ -4,6 +4,8 @@ import React, { Component} from "react";
 import {Row, Col, Form, Button} from 'react-bootstrap';
 
 // --------------------------  styles ---------------------------------------------
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import styles from "../styles/loginForm.css";
 
 // --------------------------  components -----------------------------------------
@@ -11,7 +13,18 @@ import styles from "../styles/loginForm.css";
 
 // --------------------------------- COMPONENT ----------------------------------------
 
-export default class LoginForm extends Component{
+export default class LoginForm extends Component {
+
+  state = {
+    isPasswordVisible: false
+  }
+
+  togglePassword = () => {
+    this.setState({
+      isPasswordVisible: !this.state.isPasswordVisible
+    });
+  };
+
   render() {
     return (
       <Form className={styles.loginForm}>
@@ -22,8 +35,13 @@ export default class LoginForm extends Component{
 
         <Form.Group controlId="formBasicPassword" >
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password"/>
-            <div className='text-right'><span toggle="#input-pwd" className="fa fa-fw field-icon toggle-password fa-eye"></span>Show</div>
+          <Form.Control type="password" data-toggle="password"/>
+            <div className={`${styles.togglePassword} text-right`} onClick={() => this.togglePassword()}>
+              {this.state.isPasswordVisible ? 
+                <FontAwesomeIcon icon={faEyeSlash} /> : 
+                <FontAwesomeIcon icon={faEye} />}
+              {this.state.isPasswordVisible ? ' Hide' : ' Show'}
+            </div>
           <Form.Text className="text-muted text-right">
             Forgot password?
           </Form.Text>

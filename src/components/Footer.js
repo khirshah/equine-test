@@ -29,7 +29,7 @@ export default class Footer extends Component {
 
   render() {
     return (
-        <Row className={`${styles.footer} mt-auto justify-content-end`} >
+        <Row className={`${styles.footer} fixed-bottom mb-4 mr-sm-4 justify-content-sm-end justify-content-center`} >
           {this.loadFooterImages(this.state.footerImages)}
         </Row>
     );
