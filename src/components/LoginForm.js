@@ -35,7 +35,6 @@ export default class LoginForm extends Component {
             }
             .togglePW {
               margin-top: -23px;
-              margin-bottom: 7px;
             }
             .btn-primary, .btn-primary:active, .btn-primary:hover {
               background-color: #006760;
@@ -59,15 +58,14 @@ export default class LoginForm extends Component {
           <Form.Label>Password</Form.Label>
           <Form.Control 
           type={this.state.isPasswordVisible ? "text" : "password"}
-          style={{cursor: 'pointer'}}
           />
-          <div className='text-right mr-2 togglePW customTextColor' onClick={() => this.togglePassword()}>
+          <div style={{cursor: 'pointer'}} className='text-right mr-2 togglePW customTextColor flex-shrink' onClick={() => this.togglePassword()}>
             {this.state.isPasswordVisible ? 
               <FontAwesomeIcon icon={faEyeSlash} /> : 
               <FontAwesomeIcon icon={faEye} />}
             {this.state.isPasswordVisible ? ' Hide' : ' Show'}
           </div>
-          <Form.Text className="mr-1 text-right">
+          <Form.Text className="mr-1 mt-3 text-right">
             <a className='customizedLink' href="">Forgot password?</a>
           </Form.Text>
         </Form.Group>
