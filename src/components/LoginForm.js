@@ -23,7 +23,7 @@ export default class LoginForm extends Component{
         <Form.Group controlId="formBasicPassword" >
           <Form.Label>Password</Form.Label>
           <Form.Control type="password"/>
-            <div><span toggle="#input-pwd" className="fa fa-fw field-icon toggle-password fa-eye"></span>Show</div>
+            <div className='text-right'><span toggle="#input-pwd" className="fa fa-fw field-icon toggle-password fa-eye"></span>Show</div>
           <Form.Text className="text-muted text-right">
             Forgot password?
           </Form.Text>

@@ -17,10 +17,10 @@ import Footer from './Footer';
 class App extends Component{
   render() {
     return (
-      <Container className={`${styles.App} w-100 h-100`} fluid>
+      <Container className={`${styles.App} h-100`} fluid>
         <Row>
-          <Col md={6} xs={{span:12, height: 50}} className={`${styles.backgroundImage}`}></Col>
-          <Col md={6} xs={{span:12, height: 50}} className={`${styles.loginInterface}  d-flex flex-column justify-content-center`} >
+          <Col sm={6} xs={12} className={`${styles.backgroundImage}`}></Col>
+          <Col sm={6} xs={12} className={`${styles.loginInterface}  d-flex flex-column justify-content-center`} >
             <LoginContainer/>
             <Footer/>
           </Col>

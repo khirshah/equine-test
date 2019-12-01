@@ -16,7 +16,7 @@ export default class LoginContainer extends Component{
   render() {
     return (
         <Row className={`${styles.loginContainer} mt-auto`}>
-          <Col xs={{span:5,offset:2}} >
+          <Col sm={{span:5,offset:2}} >
             <Col xs={10} className='p-0'>
               <Image src={require('../assets/background_images/EQ-logo-CMYK-300dpi--green.png')} fluid />
             </Col>
