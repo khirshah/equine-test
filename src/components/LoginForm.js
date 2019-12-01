@@ -28,6 +28,14 @@ export default class LoginForm extends Component {
   render() {
     return (
       <Form className={styles.loginForm}>
+          <style type="text/css">
+            {`
+            #formBasicEmail, #formBasicPassword {
+              border: solid 1px black;
+              border-radius: 0px;
+            }
+            `}
+          </style>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" />
@@ -35,8 +43,17 @@ export default class LoginForm extends Component {
 
         <Form.Group controlId="formBasicPassword" >
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" data-toggle="password"/>
-            <div className={`${styles.togglePassword} text-right`} onClick={() => this.togglePassword()}>
+          <Form.Control type="password" type={this.state.isPasswordVisible ? "text" : "password"}/>
+            <style type="text/css">
+              {`
+              .togglePW{
+                color: #006760;
+                margin-top: -23px;
+                margin-bottom: 7px;
+              }
+              `}
+            </style>
+            <div className={`${styles.togglePassword} text-right mr-2 togglePW`} onClick={() => this.togglePassword()}>
               {this.state.isPasswordVisible ? 
                 <FontAwesomeIcon icon={faEyeSlash} /> : 
                 <FontAwesomeIcon icon={faEye} />}

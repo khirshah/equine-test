@@ -5,13 +5,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
 // --------------------------  styles ---------------------------------------------
 import styles from "../styles/app.css";
 
 // --------------------------  components -----------------------------------------
 import LoginContainer from './LoginContainer';
 import Footer from './Footer';
+
 // --------------------------------- COMPONENT ----------------------------------------
 
 class App extends Component{
