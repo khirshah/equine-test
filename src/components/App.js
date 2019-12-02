@@ -1,26 +1,25 @@
 // ---------------------------------- IMPORT ------------------------------------------
 // --------------------------- React and Bootstrap --------------------------------
-import React, { Component} from "react";
+import React, {Component} from "react";
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import {Row, Col} from 'react-bootstrap';
 
-
-// --------------------------  styles ---------------------------------------------
+// ---------------------------------  styles --------------------------------------
 import styles from "../styles/app.css";
 
-// --------------------------  components -----------------------------------------
+// -------------------------------  components ------------------------------------
 import LoginContainer from './LoginContainer';
 import Footer from './Footer';
+
 // --------------------------------- COMPONENT ----------------------------------------
 
 class App extends Component{
   render() {
     return (
-      <Container className={`${styles.App} w-100 h-100`} fluid>
-        <Row>
-          <Col md={6} xs={{span:12, height: 50}} className={`${styles.backgroundImage}`}></Col>
-          <Col md={6} xs={{span:12, height: 50}} className={`${styles.loginInterface}  d-flex flex-column justify-content-center`} >
+      <Container className={styles.App} fluid>
+        <Row className='vh-100'>
+          <Col sm={6} xs={12} className={`${styles.backgroundImage}`}></Col>
+          <Col sm={6} xs={12} className={`${styles.loginInterface} d-flex flex-column justify-content-sm-center`} >
             <LoginContainer/>
             <Footer/>
           </Col>
