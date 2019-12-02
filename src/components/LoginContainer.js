@@ -27,7 +27,7 @@ export default class LoginContainer extends Component{
             }
             `}
           </style>
-          <Col sm={{span:5,offset:2}} >
+          <Col md={{span:5,offset:2}} >
             <Col xs={10} className='logoContainer p-0'>
               <Image src={require('../assets/background_images/EQ-logo-CMYK-300dpi--green.png')} fluid />
             </Col>
