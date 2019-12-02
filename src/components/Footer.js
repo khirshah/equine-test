@@ -1,11 +1,9 @@
 // ---------------------------------- IMPORT ------------------------------------------
 // --------------------------- React and Bootstrap --------------------------------
-import React, { Component} from "react";
-import {Row,Col,Navbar} from 'react-bootstrap';
+import React, {Component} from "react";
+import {Row} from 'react-bootstrap';
 
-// --------------------------  styles ---------------------------------------------
-
-// --------------------------  components -----------------------------------------
+// -------------------------------  components ------------------------------------
 import FooterImage from './FooterImage';
 
 // --------------------------------- COMPONENT ----------------------------------------
@@ -26,7 +24,7 @@ export default class Footer extends Component {
 
   render() {
     return (
-        <Row no-gutters className='footer sticky-bottom mt-auto mb-4 mr-sm-4 justify-content-center justify-content-sm-end' >
+        <Row className='footer sticky-bottom mt-auto mb-4 justify-content-center justify-content-sm-end' >
           {this.loadFooterImages(this.state.footerImages)}
         </Row>
     );

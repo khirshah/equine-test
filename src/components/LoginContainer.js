@@ -1,14 +1,13 @@
 // ---------------------------------- IMPORT ------------------------------------------
 // --------------------------- React and Bootstrap --------------------------------
-import React, { Component} from "react";
+import React, {Component} from "react";
 import {Row, Col, Image} from 'react-bootstrap';
 
-
-// --------------------------  styles ---------------------------------------------
+// ---------------------------------  styles --------------------------------------
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 
-// --------------------------  components -----------------------------------------
+// -------------------------------  components ------------------------------------
 import LoginForm from './LoginForm'
 
 // --------------------------------- COMPONENT ----------------------------------------
@@ -29,14 +28,14 @@ export default class LoginContainer extends Component{
             `}
           </style>
           <Col sm={{span:5,offset:2}} >
-            <Col xs={10} className='p-0'>
+            <Col xs={10} className='logoContainer p-0'>
               <Image src={require('../assets/background_images/EQ-logo-CMYK-300dpi--green.png')} fluid />
             </Col>
-            <Col className="p-0 mb-5"><h4><FontAwesomeIcon icon={faLock} /> Vet Login</h4></Col>
+            <Col className="vetLoginText p-0 mb-5"><h4><FontAwesomeIcon icon={faLock} /> Vet Login</h4></Col>
             <LoginForm/>
-            <div className='smallerText text-center mt-3'>
+            <div className='loginFooter smallerText text-center mt-3'>
               <div>Don't have an account?</div>
-              <div><a  className='customizedLink smallerText' href="">Register for free account</a></div>
+              <div><a className='customizedLink' href="">Register for free account</a></div>
             </div>
           </Col>
         </Row>

@@ -1,14 +1,11 @@
 // ---------------------------------- IMPORT ------------------------------------------
 // --------------------------- React and Bootstrap --------------------------------
-import React, { Component} from "react";
+import React, {Component} from "react";
 import {Row, Col, Form, Button} from 'react-bootstrap';
 
-// --------------------------  styles ---------------------------------------------
+// ---------------------------------  styles --------------------------------------
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
-
-// --------------------------  components -----------------------------------------
-
+import { faEye, faEyeSlash, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 
 // --------------------------------- COMPONENT ----------------------------------------
 
@@ -62,7 +59,7 @@ export default class LoginForm extends Component {
           <Form.Control 
           type={this.state.isPasswordVisible ? "text" : "password"}
           />
-          <div style={{cursor: 'pointer'}} className='text-right mr-2 togglePW customTextColor flex-shrink' onClick={() => this.togglePassword()}>
+          <div style={{cursor: 'pointer'}} className=' togglePW customTextColor text-right mr-2' onClick={() => this.togglePassword()}>
             {this.state.isPasswordVisible ? 
               <FontAwesomeIcon icon={faEyeSlash} /> : 
               <FontAwesomeIcon icon={faEye} />}
@@ -72,8 +69,9 @@ export default class LoginForm extends Component {
             <a className='customizedLink' href="">Forgot password?</a>
           </Form.Text>
         </Form.Group>
-        <Button variant="outline-dark" type="submit" className="w-100">
-          LOGIN >
+        <Button variant="outline-dark" type="submit" className="w-100 ">
+          <strong> LOGIN </strong>
+          <FontAwesomeIcon className='ml-2' icon={faChevronRight} />
         </Button>
       </Form>
     );
