@@ -4,7 +4,6 @@ import React, { Component} from "react";
 import {Row,Col,Navbar} from 'react-bootstrap';
 
 // --------------------------  styles ---------------------------------------------
-import styles from "../styles/footer.css";
 
 // --------------------------  components -----------------------------------------
 import FooterImage from './FooterImage';
@@ -27,7 +26,7 @@ export default class Footer extends Component {
 
   render() {
     return (
-        <Row no-gutters className={`${styles.footer} sticky-bottom mt-auto mb-4 mr-sm-4 justify-content-center justify-content-sm-end`} >
+        <Row no-gutters className='footer sticky-bottom mt-auto mb-4 mr-sm-4 justify-content-center justify-content-sm-end' >
           {this.loadFooterImages(this.state.footerImages)}
         </Row>
     );
