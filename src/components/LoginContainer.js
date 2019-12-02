@@ -23,6 +23,9 @@ export default class LoginContainer extends Component{
               color: #006760;
               text-decoration: underline;
             }
+            .smallerText {
+              font-size: 10px;
+            }
             `}
           </style>
           <Col sm={{span:5,offset:2}} >
@@ -31,9 +34,9 @@ export default class LoginContainer extends Component{
             </Col>
             <Col className="p-0 mb-5"><h4><FontAwesomeIcon icon={faLock} /> Vet Login</h4></Col>
             <LoginForm/>
-            <div className='text-center mt-3'>
+            <div className='smallerText text-center mt-3'>
               <div>Don't have an account?</div>
-              <div><a  className='customizedLink' href="">Register for free account</a></div>
+              <div><a  className='customizedLink smallerText' href="">Register for free account</a></div>
             </div>
           </Col>
         </Row>

@@ -34,10 +34,13 @@ export default class LoginForm extends Component {
               border-radius: 0px;
             }
             .togglePW {
+              width: 55px;
+              margin-left: auto;
               margin-top: -23px;
             }
-            .btn-primary, .btn-primary:active, .btn-primary:hover {
+            .btn, .btn:hover, .btn:focus, .btn:active {
               background-color: #006760;
+              color: white;
               border: solid #006760;
             }
             .customTextColor {
@@ -69,7 +72,7 @@ export default class LoginForm extends Component {
             <a className='customizedLink' href="">Forgot password?</a>
           </Form.Text>
         </Form.Group>
-        <Button variant="primary" type="submit" className="w-100">
+        <Button variant="outline-dark" type="submit" className="w-100">
           LOGIN >
         </Button>
       </Form>

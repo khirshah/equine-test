@@ -27,9 +27,9 @@ export default class Footer extends Component {
 
   render() {
     return (
-        <Navbar className={`${styles.footer} sticky-bottom mt-auto mb-4 mr-sm-4 justify-content-center justify-content-sm-end`} >
+        <Row no-gutters className={`${styles.footer} sticky-bottom mt-auto mb-4 mr-sm-4 justify-content-center justify-content-sm-end`} >
           {this.loadFooterImages(this.state.footerImages)}
-        </Navbar>
+        </Row>
     );
   }
 }

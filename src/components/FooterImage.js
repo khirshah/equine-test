@@ -11,9 +11,9 @@ import styles from "../styles/footerImage.css";
 export default class LoginContainer extends Component{
   render() {
     return (
-        <Col className={`${styles.footerImageContainer} d-flex flex-grow-0 align-items-center`}>
-          <Image src={require(`../assets/logos/${this.props.img}_logo.png`)} className={`${styles.footerImage} mw-50`}/>
-        </Col>
+        <div  className={`${styles.footerImageContainer} d-flex  p-2 align-items-center`}>
+          <Image src={require(`../assets/logos/${this.props.img}_logo.png`)} className={`${styles.footerImage}`}/>
+        </div>
     );
   }
 }
